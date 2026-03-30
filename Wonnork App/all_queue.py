@@ -75,12 +75,12 @@ class _RestaurantCard(QFrame):
         q_col.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
 
         q_color = ACCENT_RED if has_queue else ACCENT_GREEN
-        q_num = QLabel(f"{queue} คิว")
+        q_num = QLabel(f"{queue} Queue")
         q_num.setFont(_font(15, QFont.Weight.Bold))
         q_num.setAlignment(Qt.AlignmentFlag.AlignRight)
         q_num.setStyleSheet(f"color: {q_color}; background: transparent;")
 
-        q_sub = QLabel("กำลังรออยู่")
+        q_sub = QLabel("Waiting")
         q_sub.setFont(_font(11))
         q_sub.setAlignment(Qt.AlignmentFlag.AlignRight)
         q_sub.setStyleSheet(f"color: {TEXT_MUTED}; background: transparent;")
@@ -153,7 +153,7 @@ class AllQueuesPage(QWidget):
         return topbar
 
     def _build_subheader(self) -> QLabel:
-        lbl = QLabel("สถานะคิวปัจจุบัน · เรียงตามระยะทางจากตำแหน่งของคุณ")
+        lbl = QLabel("Current Queues · Near You")
         lbl.setFont(_font(12))
         lbl.setStyleSheet(f"color: {TEXT_MUTED}; background: transparent;")
         return lbl
