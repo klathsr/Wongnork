@@ -62,7 +62,7 @@ class _InfoBar(QFrame):
         self._coord_lbl.setFont(_font(13, QFont.Weight.Medium))
         self._coord_lbl.setStyleSheet(f"color: {TEXT_PRIMARY}; background: transparent;")
 
-        hint = QLabel("คลิกบนแผนที่เพื่อปักหมุดตำแหน่งของคุณ")
+        hint = QLabel("Click on the map to pin your location.")
         hint.setFont(_font(11))
         hint.setStyleSheet(f"color: {TEXT_MUTED}; background: transparent;")
 
